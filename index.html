@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Игра-игрушка</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" type="image/png">
+    </head>
+    <body>
+        <div id="all">
+            <nav id="navbar">
+                <header id="header">
+                    <div id="logo">
+                        <img id="logo-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAkFBMVEX33x4AAAD/5x/hyxtZUAv/5h/64h7/6R/64R65pxfw2R323h7ZxBrlzxyvnhWzoRZUTAqFeBAyLQZfVgx1aQ7WwRpLRAnItBhlWwzDsBiNfxErJwXQvBkkIASXiBKsmxWUhRI9NwdsYg18cA+gkBMTEQOPgRE4MgdGPwkLCgJ/cw8YFQM9NwhvZQ4bGQMnIwU51ZnrAAAFWElEQVR4nO2ca1PiMBSGm2IuvYFcCiIooriruO7+/3+3LQtrm7RJqrOwTd5nxi/WOs0zyelJmpMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALgojNEjjF36Wc4PDeuI9j8VlIt8tNvP3mez8W6UC079Ekb311dV5lmbLRamDy+kxvZbTulZH/eyhNf19pNBsyzGht9JA6uN8EdXeGUjS/DRc5OqAyOuGbpOYSWLxvNWVQXz2JPQZSMrXOhUlaz9GIoWssKRyRUhUXiJhz83Zlk0MrsiZOlD3zLKYrmNK0JyD+KWuWe1vwbrxO6/E02y+JOlK3LFL9SE82GQJQa2rop8y/mwZZDFH+1lkfhSjTgXelki7uBqd7FGnAu9LLZRnTxGaZblwxvp1/PM+VFokMXlaTZ5yTgTQjDG45ouLyaIhpglu5p/rHcJvvvobbH73SowyBKpLKuWTPHjIH1d+tCtAoMstpQujutTQD4rf7kXHiTvB/Sy5Pi+kLTQN7LK3U9GT2hl0XvNxRK2vPXpu8XXZAXMi8B+Qi9rJ11c+BHI29DHrKF08darjqSgTx3ktyG53IP+D3TMs278efU1oM/gE1kWeffsI3QNw9zwRbH1PfUkXW9AL0vJHUpmsW5DhMsY1rOUoPVH18DP3mVaKd022iJXC692hBwxyGKtHw1Xm4D61r2MX3dWbbYIGWfcr1ejSRZbt8sq0q7cK13Gj6zhWGeLXK89ivUWex20242KWD/wJqs3yxKJJmwdeEo8eTNabDkS8cRgi0R+dC6bzWwiUL6IyTx6sQ5vt6c0/GaydZd5YMtOVsDXdyZdufuBy1JWwNiD0ZbzfctWVrlleWaw5fxItJcVCD7Q67pzPT3tIKvUld3qbD05nkF0klXWOgUbTY6auj0QO8oqYHwxbZN17XbX6i6r1JW1za5Tp8PWZ2SVozFuWp0nZOx0svU5WQU0aNL15nTQ+rSsMvFqmDI6PQ6/IKvIJNQp48blrvUVWcWUUQn0Tgetr8kKQnmp68rlWjo7Wa1ji8m1iFunZVkUlNNk1za4RCbdfufMMAzVdQFl64dyVAHjRe8ZtjqQbn91RFa5xqIUBYbyTC+pXxc8PxxR0Lb8IqTbn52QxWi5T3smT96UHVh1mzQ+loVNWmTJlVArF2Tx/MehMet6o5UPzrWYw9hHlj5tjNzKXoh5/wM8TU4FqW9Sz5ETpUpjGY+qJb83TftAuHyMyGPfexYLK7uOaz1ErSf8SCp5KsX+uVrNxJW1wPuey+Lpttqcyq5QweUsi4xOF5tW3KP6NhAWquumcsFKv2CJXBK+HXDG/pQMKq4+Mgf5NXfgZRnS4t7yMqN8sVX/ItE9y/9OY0X4dLgepOthQ/3z5O8gVSrCjsyG6ywJ4nR5+7PpP/c7vlPjRoUqlZDDWxePNSx7PQoDZjx1p0olf+9UTH6k95MdLpd+a6gVUHTTfCDqd8fq1kOkrcpyUZiJef8/7tj3kL0UntW1PT2t5wX2CN78JUbhp9LWbrbcOBbKss0DNeJ0GYnDfqcNf1GnJQ0smjoGb0m3VNzZKskbzkmRaDm3r/GDl/3tvYSmv7RtnbQeJSN49GpU9Z70PWmowRrL4U7c6+pwGNvpj2ebr50Zgido3LaNdmw6SoayqH0wPq6drEkp2qxOnqejxKK8i4WZcgrUwdQoDl1UVcJCmm/200k5rJ4n0/1mTW3bKljIB9H97HpV3vz6a/7+EA1cP7dbMBpyzmnxE3Y91L24t3IzZQ5k7AAAAAAAAAAA/i2/AfqtOytB5IHXAAAAAElFTkSuQmCC">
+                        <p id="logo-text">Игра на JS</p>
+                    </div>
+                    <ul id="ul-nav">
+                        <li><a class="nav-link first" href="#Зачем_вам_создавать_игру_на_js?">Зачем вам создавать игру на js?</a></li>
+                        <li><a class="nav-link" href="#Комфортное_отображение">Комфортное отображение</a></li>
+                        <li><a class="nav-link" href="#Задаем_координаты">Задаем координаты</a></li>
+                        <li><a class="nav-link" href="#А_где_же_рамки?">А где же рамки?</a></li>
+                        <li><a class="nav-link" href="#А_дальше_что?">А дальше что?</a></li>
+                    </ul>
+                </header>
+            </nav>
+            <main id="main-doc">
+                <section class="main-section" id="Зачем_вам_создавать_игру_на_js?">
+                    <header class="header">Зачем вам создавать игру на js?</header>
+                    <article class="article">
+                        <p>
+                                Почти каждый задумывался о том, что бы начать карьеру програмиста. 
+                            И почти перед каждым ставал вопрос "А на каком языке я буду писать код?" 
+                            Многие выберут C, C++, но есть и другие. <br> <br> Тот, кто интересовался работой сайтов, знают, 
+                            что есть несколько языков программирования, которые могут стать вашими инструментами
+                            во время создания сайта. Один из самых популярных сейчас - JavaSript.<br>JavaSript, или сокращенно js, выступает именно тем инструментом, который может добавить
+                            функционала вашему сайту. 
+                        </p>
+                        <p>
+                                В наше время, очень много сайтов, которые помимо  HTML и CSS используют JS для того, что бы 
+                            добавить определенных функций своему сайту.
+                        </p>
+                        <p>
+                                Так с чего же начать? <br> Начинайте с самого начала. Изначально вам будет интересно написать самую 
+                            первую программу, которая приоткроет вам завесу мира, который может вам открыть JS. <br> 
+                            Эта программа являэтся первой, которую можно написать на любом языке программирования и называется она
+                            <b>"Hello, world"</b> и состоит всего лишь из одной строчки кода:
+                        </p>
+                        <pre class="a1">
+                            <code>
+console.log("Hello, world!");
+                            </code>
+                        </pre>
+                        <p>
+                                В дальнейшем, когда вы уже освоите основы JavaSript, вам захочется усовершенствовать ваши навыки и вы подумаете, а
+                            что же можно написать такого, что поможет мне развить себя?т <br> Вот тут то вы и подумаете о написании простенькой игры, которая
+                            совмещала бы в себе основы js, немного HTML и чуточку CSS. 
+                        </p>
+                        <p>
+                                Я предлагаю вам написать игру <b><i>"Тащи мяч"</i></b> <br> Для начала вам нужно будет найти (или нарисовать) мяч и поле. 
+                            А потом с помощью HTML и CSS подключить их. 
+                        </p>
+                        <p>HTML:</p>
+                        <pre class="a1">
+                            <code> 
+&lt;div id="field"&gt;
+    &lt;img src="https://ru.js.cx/clipart/ball.svg" id="ball"&gt; 
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ &lt;/div&gt;
+                            </code>
+                        </pre>
+                        <p>CSS:</p>
+                        <pre class="a1">
+                            <code>
+#field {
+    width: 200px;
+    height: 150px;
+    border: 10px solid black;
+    background-color: #00FF00;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+                    
+#ball {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    transition: all 1s;
+}
+                            </code>
+                        </pre>
+                        <p> После того, как у нас есть мяч и поле мы можем приступать к их анимации.</p>
+                    </article> 
+                </section>
+                <section class="main-section" id="Комфортное_отображение">
+                    <header class="header">Комфортное отображение</header>
+                    <article class="article">
+                        <p> Итак, первым делом составим список, что же нам надо сделать для комфортной игры?</p>
+                        <ul>
+                            <li class="list">Задать функцию события</li>
+                            <li class="list">Задать координаты относительно окна браузера</li>
+                            <li class="list">Задаем координаты мяча</li>
+                            <li class="list">задаем координаты поля</li>
+                            <li class="list">Запрещаем мячу пересекать приделы поля</li>
+                        </ul>
+                        <p>После этого приступаем к первому пункту нашего плана и задаем функцию события,  <br>которая будет выглядеть примерно так:</p>
+                        <pre class="a1"> 
+                            <code>
+field.onclick = function(event) {}
+                            </code>
+                        </pre>
+                        <p>Итак, теперь мы можем приступить к выполнению следующего пункта плана.</p>
+                    </article>
+                </section>
+                <section class="main-section" id="Задаем_координаты">
+                    <header class="header">Задаем координаты</header>
+                    <article class="article">
+                        <p>
+                            Теперь нам нужно сделать так, что бы поле комфортно отображалось в браузере. <br>
+                            Для этого внутри нашей функции события прописываем вот такую строчку кода:
+                        </p>
+                        <pre class="a1">
+                            <code>
+let fieldCoords = this.getBoundingClientRect();
+                            </code>
+                        </pre>
+                        <p>Теперь предлагаю задать координаты нашему полю и мячу. Все это будет выглядеть примерно так:</p>
+                        <pre class="a1">
+                            <code>
+let ballCoords = {
+    top: event.clientY - fieldCoords.
+    top - field.clientTop - ball.clientHeight / 2,
+    left: event.clientX - fieldCoords.
+    left - field.clientLeft - ball.clientWidth / 2
+};
+                            </code>
+                        </pre>
+                        <p>Отлично! Этот шаг выполнен, а значит, мы можем переходить к следующему!</p>
+                    </article>
+                </section>
+                <section class="main-section" id="А_где_же_рамки?">
+                    <header class="header">А где же рамки?</header>
+                    <article class="article">
+                        <p>
+                            Вот мы и приступаем к последним шагам создания нашей игры. <br> Для того, что бы наш мяч не смог вылететь 
+                            за пределы игрового поля, предлагаю прописать вот такую комбинацию кода:
+                        </p>
+                        <pre class="a1">
+                            <code>
+if (ballCoords.top < 0) ballCoords.top = 0;
+
+if (ballCoords.left < 0) ballCoords.left = 0;
+
+if (ballCoords.left + ball.clientWidth > field.clientWidth) {
+    ballCoords.left = field.clientWidth - ball.clientWidth;
+}
+
+if (ballCoords.top + ball.clientHeight > field.clientHeight) {
+    ballCoords.top = field.clientHeight - ball.clientHeight;
+}
+                            </code>
+                        </pre>
+                        <p>И теперь добавляем последний штрих:</p>
+                        <pre class="a1">
+                            <code>
+ball.style.left = ballCoords.left + 'px';
+ball.style.top = ballCoords.top + 'px';
+                            </code>
+                        </pre>
+                        <p>Вот и все! Если вам интересно, как будет выглядеть весь код, то вот:</p>
+                        <pre class="a1"> 
+                            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;style&gt;
+      #field {
+        width: 200px;
+        height: 150px;
+        border: 10px solid black;
+        background-color: #00FF00;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+                            
+      #ball {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        transition: all 1s;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body style="height:2000px"&gt;
+    &lt;div id="field"&gt;
+      &lt;img src="https://ru.js.cx/clipart/ball.svg" id="ball"&gt; 
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    &lt;/div&gt;
+    &lt;script&gt;
+      field.onclick = function(event) {
+        let fieldCoords = this.getBoundingClientRect();
+                                          
+        let ballCoords = {
+          top: event.clientY - fieldCoords.
+          top - field.clientTop - ball.clientHeight / 2,
+          left: event.clientX - fieldCoords.
+          left - field.clientLeft - ball.clientWidth / 2
+        };
+
+        if (ballCoords.top < 0) ballCoords.top = 0;
+
+        if (ballCoords.left < 0) ballCoords.left = 0;
+                
+        if (ballCoords.left + ball.clientWidth > field.clientWidth) {
+            ballCoords.left = field.clientWidth - ball.clientWidth;
+        }
+                
+        if (ballCoords.top + ball.clientHeight > field.clientHeight) {
+            ballCoords.top = field.clientHeight - ball.clientHeight;
+        }
+
+        ball.style.left = ballCoords.left + 'px';
+
+        ball.style.top = ballCoords.top + 'px';
+      }
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                            </code>
+                        </pre>
+                    </article>
+                </section>
+                <section class="main-section" id="А_дальше_что?">
+                    <header class="header">А дальше что?</header>
+                    <article class="article">
+                        <p>Поздравляю! Теперь вы можете даную незамысловатую игру в ваше резюме.</p>
+                        <p>
+                            Дальше дело в вас и в вашем желинии развиваться. В Интернете существует очень много ресурсов, <br> которые бесплатно предоставляют
+                            учебные материалы по JS. <br> вы можете использовать любые ресурсы для вашего самооьразования и потом это вам поможет!
+                        </p>
+                        <p>
+                            Верьте в себя и помните, что вы можете создать все, что захотите!
+                        </p>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

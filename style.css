@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    background-image: url(https://lh3.googleusercontent.com/proxy/dm_lClnvH0ixMfTfYJgSY-EPNK37tG_vjtqYeLwEExrDBRnDl7Bol7bqgQB0Yju4Eb2MPaToqof9JvzGI-42EFKXmSe6UArcyvk);
+    z-index: -1;
+}
+
+#all {
+    z-index: 1;
+    background-color: #c5c7c193;
+}
+
+#navbar {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: fixed;
+    width: 27%;
+    height: 100%;
+    background-color: #eaf8cac4;
+    border-right: 2px black solid;
+}
+
+#main-doc {
+    width: 73%;
+    margin-left: 27%;
+}
+
+#logo-img {
+    width: 100%;
+    border-bottom: 2px black solid;
+}
+
+#logo-text {
+    font-family: 'Rubik Mono One', sans-serif;
+    text-align: center;
+    font-size: 140%;
+    padding: 5% 0;
+    margin: 0px;
+    border-bottom: 1px black solid;
+}
+
+#ul-nav {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.nav-link {
+    display: flex;
+    padding: 8% 10%;
+    border-top: 1px solid black;
+    font-family: 'Rubik', sans-serif;
+    color: black;
+    font-size: 110%;
+    text-decoration: none;
+}
+
+#main-doc {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 2% 0;
+    background-color: #ffee00cc;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 105%;
+    margin: 0% 5%;
+}
+
+.article {
+    padding: 0.5% 2%;
+    margin: 0% 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(215, 248, 187, 0.719);
+}
+
+p {
+    margin: 1% 0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.list {
+    font-family: 'Roboto', sans-serif;
+}
+
+.a1 {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 235, 205, 0.637);
+    width: 70%;
+    margin: 0 15%;
+    border: 2px black solid;
+}
+
+code {
+    font-family: 'Poppins', sans-serif;
+    font-size: 70%;
+}
+
+@media (max-width: 815px) {
+    body {
+        top: 0;
+    }
+
+    #logo-img {
+        display: none;   
+    }
+    
+    #navbar {
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        height: 25%;
+        border-bottom: 2px black solid;
+        background-color: rgba(255, 249, 226, 0.952);
+    }
+
+    #logo-text {    
+        font-size: 100%;
+        padding: 1% 0;
+        background-color: rgba(241, 245, 35, 0.808);
+    }
+
+    .nav-link {
+        padding: 1% 10%;
+    }
+
+    #main-doc {
+        justify-content: center;
+        display: flex;
+        padding: 27% 0 0 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .main-section {
+        display: flex;
+        width: 100%;
+    }
+
+    .article {
+        display: flex;
+        padding: 1% 1%;
+        margin: 0% 2%;
+    }
+
+    .header {
+        margin: 0 2%;
+    }
+}
